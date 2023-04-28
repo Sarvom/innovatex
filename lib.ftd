@@ -73,7 +73,6 @@ align-content: center
 -- ftd.text: $navbar-mobile.name
 margin-bottom.px: 10
 role: $inherited.types.heading-small
-color: #9400d3
 
 -- ftd.row:
 align-self: center
@@ -149,21 +148,18 @@ padding-left.px: 32
 spacing.fixed.px: 40
 
 -- ftd.text: $navbar-desktop.cta-text-1
-color: #c091fb
 role: $inherited.types.label-large
 text-align: center
 white-space: nowrap
 link: $navbar-desktop.cta-link-1
 
 -- ftd.text: $navbar-desktop.cta-text-2
-color: #c091fb
 role: $inherited.types.label-large
 text-align: center
 white-space: nowrap
 link: $navbar-desktop.cta-link-2
 
 -- ftd.text: $navbar-desktop.cta-text-3
-color: #c091fb
 role: $inherited.types.label-large
 text-align: center
 white-space: nowrap
@@ -285,12 +281,13 @@ body body:
 align-self: center
 align-content: center
 width: fill-container
+padding-horizontal.px: 80
+padding-vertical.px: 40
 
 -- ftd.row:
 align-self: center
 width: fill-container
-padding-horizontal.px: 80
-padding-vertical.px: 40
+padding-bottom.px: 48
 
 -- ftd.column:
 align-self: center
@@ -344,7 +341,9 @@ string button:
 align-self: start
 align-content: left
 padding.px: 20
-width.fixed.px: 360
+max-width.fixed.px if { ftd.device == "desktop" }: 400
+spacing.fixed.px: 40
+height: hug-content
 shadow: $common.box
 
 -- ftd.image:
@@ -358,10 +357,16 @@ width.fixed.px: 350
 role: $inherited.types.heading-tiny
 
 -- ftd.text: $card-with-image.content
-role: $inherited.types.copy-large
+role: $inherited.types.copy-small
+margin-vertical.px: 20
 
 -- ftd.text: $card-with-image.button
-role: $inherited.types.copy-large
+role: $inherited.types.copy-small
+padding-vertical.px: 15
+padding-horizontal.px: 30
+background.solid: #ff1493
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -389,7 +394,9 @@ background.solid: white
 
 -- ftd.text: $about.title
 color: #303030
-role: $inherited.types.heading-large
+role: $inherited.types.heading-medium
+padding-vertical.px: 16
+margin-bottom.px: 8
 
 -- ftd.text: $about.body
 if: { $about.body != NULL }
@@ -408,4 +415,36 @@ children: $about.c
 -- end: ftd.column
 
 -- end: about
+
+
+
+
+
+
+
+
+
+-- component footer:
+caption title:
+string cta-text-1:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+align-self: center
+padding-vertical.px: 10
+background.solid: #003060
+
+-- ftd.text: $footer.title
+role: $inherited.types.copy-large
+color: white
+
+-- ftd.text: $footer.cta-text-1
+role: $inherited.types.label-large
+color: white
+
+-- end: ftd.column
+
+-- end: footer
+
 
