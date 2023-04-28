@@ -23,3 +23,25 @@ Digital World with Our Cutting-Edge Courses on industry-relevant topics.
 
 
 
+-- lib.about: Visit our Courses
+
+-- lib.card-with-image: COMPUTER SCIENCE
+pic: https://nilinswap.github.io/img/Devices-pana.svg
+button: Enroll Now
+
+Join us on a journey of discovery and creativity, as we explore the world of 
+technology and programming in an engaging and collaborative environment.
+
+-- lib.card-with-image: PHYSICAL COMPUTING 101
+pic: https://nilinswap.github.io/img/Drone-amico.svg
+button: Enroll Now
+
+Empower your future with electrifying knowledge in our progressive tech courses, 
+from Arduino to Raspberry Pi and beyond!
+
+-- end: lib.about
+
+
+
+
+
