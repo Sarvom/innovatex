@@ -1,5 +1,5 @@
 -- import: sarvom.github.io/innovatex/assets
-
+-- import: sarvom.github.io/innovatex/common
 
 -- component navbar:
 caption name:
@@ -73,7 +73,6 @@ align-content: center
 -- ftd.text: $navbar-mobile.name
 margin-bottom.px: 10
 role: $inherited.types.heading-small
-color: #9400d3
 
 -- ftd.row:
 align-self: center
@@ -128,7 +127,7 @@ string cta-link-3:
 align-content: center
 width: fill-container
 padding-horizontal.px: 80 
-padding-vertical.px: 10
+padding-vertical.px: 15
 spacing.fixed.px: 40
 background.solid: #ffffff99
 sticky: true
@@ -146,23 +145,21 @@ role: $inherited.types.heading-small
 
 -- ftd.row:
 padding-left.px: 32
+spacing.fixed.px: 40
 
 -- ftd.text: $navbar-desktop.cta-text-1
-color: #c091fb
 role: $inherited.types.label-large
 text-align: center
 white-space: nowrap
 link: $navbar-desktop.cta-link-1
 
 -- ftd.text: $navbar-desktop.cta-text-2
-color: #c091fb
 role: $inherited.types.label-large
 text-align: center
 white-space: nowrap
 link: $navbar-desktop.cta-link-2
 
 -- ftd.text: $navbar-desktop.cta-text-3
-color: #c091fb
 role: $inherited.types.label-large
 text-align: center
 white-space: nowrap
@@ -239,20 +236,17 @@ margin-bottom.px: 64
 -- ftd.text: $hero-mobile.headline
 color: #303030
 role: $inherited.types.heading-medium
-text-align: center
 
 -- ftd.text: $hero-mobile.title
 color: #303030
 max-width.fixed.px: 576
 role: $inherited.types.heading-large
-text-align: center
 
 
 -- ftd.text: $hero-mobile.body
 color: #303030
 role: $inherited.types.heading-small 
 padding-vertical.px: 10
-text-align: center
 
 -- end: ftd.column
 
@@ -287,23 +281,23 @@ body body:
 align-self: center
 align-content: center
 width: fill-container
-
--- ftd.row:
-align-self: center
-align-content: center
-width: fill-container
 padding-horizontal.px: 80
 padding-vertical.px: 40
 
+-- ftd.row:
+align-self: center
+width: fill-container
+padding-bottom.px: 48
+
 -- ftd.column:
-align-self: start
-align-content: left
+align-self: center
 width: fill-container
 margin-bottom.px: 8
 
 -- ftd.text: $hero-desk.headline
 color: #303030
-role: $inherited.types.heading-medium
+role: $inherited.types.heading-small
+margin-bottom.px: 8
 
 -- ftd.text: $hero-desk.title
 color: #303030
@@ -312,7 +306,7 @@ role: $inherited.types.heading-large
 
 -- ftd.text: $hero-desk.body
 color: #303030
-role: $inherited.types.heading-small 
+role: $inherited.types.copy-large 
 padding-vertical.px: 10
 
 -- end: ftd.column
@@ -327,3 +321,130 @@ src: $hero-desk.pic
 -- end: ftd.column
 
 -- end: hero-desk
+
+
+
+
+
+
+
+
+
+
+-- component card-with-image:
+ftd.image-src pic:
+caption title:
+body content:
+string button:
+
+-- ftd.column:
+align-self: start
+align-content: left
+padding.px: 20
+max-width.fixed.px if { ftd.device == "desktop" }: 400
+spacing.fixed.px: 40
+height: hug-content
+shadow: $common.box
+
+-- ftd.image:
+src: $card-with-image.pic
+height.fixed.px: 350
+width.fixed.px: 350
+
+-- ftd.column:
+
+-- ftd.text: $card-with-image.title
+role: $inherited.types.heading-tiny
+
+-- ftd.text: $card-with-image.content
+role: $inherited.types.copy-small
+margin-vertical.px: 20
+
+-- ftd.text: $card-with-image.button
+role: $inherited.types.copy-small
+padding-vertical.px: 15
+padding-horizontal.px: 30
+background.solid: #ff1493
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: card-with-image
+
+
+
+
+
+
+
+
+
+-- component about:
+optional caption title:
+optional body body:
+children c:
+
+-- ftd.column:
+align-self: center
+align-content: center
+padding-vertical.px: 40
+padding-horizontal.px: 80
+background.solid: white
+
+-- ftd.text: $about.title
+color: #303030
+role: $inherited.types.heading-medium
+padding-vertical.px: 16
+margin-bottom.px: 8
+
+-- ftd.text: $about.body
+if: { $about.body != NULL }
+align-self: center
+role: $inherited.types.heading-tiny
+margin-top.px: 8
+text-align: center
+
+-- ftd.row:
+wrap: true
+width: fill-container
+align-self: center
+align-content: center
+children: $about.c
+
+-- end: ftd.column
+
+-- end: about
+
+
+
+
+
+
+
+
+
+-- component footer:
+caption title:
+string cta-text-1:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+align-self: center
+padding-vertical.px: 10
+background.solid: #003060
+
+-- ftd.text: $footer.title
+role: $inherited.types.copy-large
+color: white
+
+-- ftd.text: $footer.cta-text-1
+role: $inherited.types.label-large
+color: white
+
+-- end: ftd.column
+
+-- end: footer
+
+
