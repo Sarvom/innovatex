@@ -1,5 +1,5 @@
 -- import: sarvom.github.io/innovatex/assets
-
+-- import: sarvom.github.io/innovatex/common
 
 -- component navbar:
 caption name:
@@ -352,11 +352,16 @@ src: $card-with-image.pic
 height.fixed.px: 350
 width.fixed.px: 350
 
+-- ftd.column:
+
 -- ftd.text: $card-with-image.title
+role: $inherited.types.heading-tiny
 
 -- ftd.text: $card-with-image.content
+role: $inherited.types.copy-large
 
 -- ftd.text: $card-with-image.button
+role: $inherited.types.copy-large
 
 -- end: ftd.column
 
